@@ -1,0 +1,46 @@
+.circle{
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+}
+.homepage{
+    display:flex;
+    height:100%;
+}
+.profilePicture{
+        margin: 0 auto 0 auto;
+}
+.accountbox{
+    flex-shrink: 0;
+    display: flex;
+    height: 100%;
+    width: 12%;
+    background: rgba(0,0,0,0);
+}
+.library{
+    overflow-x: scroll;
+    height:100%;
+    flex:1;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content:center;
+}
+.tableLibrary{
+    overflow: auto;
+}
+.gameContainer{box-shadow: 10px 1px;}
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background: darkgrey;
+}
+
+div {
+    overflow: hidden;
+}
+

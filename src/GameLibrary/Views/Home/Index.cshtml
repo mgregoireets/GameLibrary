@@ -1,0 +1,31 @@
+﻿@model List<GameLibrary.Controllers.Game>
+ <script src="~/lib/jquery/dist/jquery.js"></script>  
+ <div class="homepage">
+        <div class="accountbox">
+            <img class="circle profilePicture" src="http://placehold.it/100x100" />
+        </div>
+        <div class="library">
+
+            @foreach(GameLibrary.Controllers.Game g in Model)
+            {
+                <div class="gameContainer">
+                </div>
+
+            }
+
+        </div>
+    </div>
+<script>
+    $(document).ready(function () {
+        $(".gameContainer").height(Math.floor(($(window).innerHeight() - getScrollBarWidth()) / 5));
+        $(".gameContainer").width($(".gameContainer").height());
+        var path = "http://placehold.it/" + $(".gameContainer").width() + "x" + $(".gameContainer").height();
+        $(".gameContainer").append('<img src="' + path + '"></img>');
+    })
+    function getScrollBarWidth() {
+        var $outer = $('<div>').css({ visibility: 'hidden', width: 100, overflow: 'scroll' }).appendTo('body'),
+            widthWithScroll = $('<div>').css({ width: '100%' }).appendTo($outer).outerWidth();
+        $outer.remove();
+        return 100 - widthWithScroll;
+    };
+</script>
