@@ -10,7 +10,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using GameLibrary.Models;
-using GameLibrary.Services;
 
 namespace GameLibrary
 {
@@ -50,9 +49,6 @@ namespace GameLibrary
 
             services.AddMvc();
 
-            // Add application services.
-            services.AddTransient<IEmailSender, AuthMessageSender>();
-            services.AddTransient<ISmsSender, AuthMessageSender>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
